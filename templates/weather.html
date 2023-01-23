@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1 id="cityName">{{ cityName }}</h1>
+<h3>{{ timezone }}</h3>
+
+<h2>Current Hour Forecast</h2>
+<div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+            <table>
+                <tr>
+                    <td><h3>{{ currentWeather["date"] }} - {{ currentWeather["time"] }}</h3></td>
+                    <td><h3>{{ currentWeather["weather"] }}</h3></td>
+                    <td><h3>{{ currentWeather["temp"] }}</h3></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<h2>5-Day Forecast</h2>
+<div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+        <div class="col-sm-8" >
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Weather Description</th>
+                    <th>Maximum Temperature</th>
+                    <th>Minimum Temperature</th>
+                </tr>
+                <tr>
+                    <td>{{ dailyForecast[0]["date"] }}</td>
+                    <td>{{ dailyForecast[0]["weather"] }}</td>
+                    <td>{{ dailyForecast[0]["max_temp"] }}</td>
+                    <td>{{ dailyForecast[0]["min_temp"] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ dailyForecast[1]["date"] }}</td>
+                    <td>{{ dailyForecast[1]["weather"] }}</td>
+                    <td>{{ dailyForecast[1]["max_temp"] }}</td>
+                    <td>{{ dailyForecast[1]["min_temp"] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ dailyForecast[2]["date"] }}</td>
+                    <td>{{ dailyForecast[2]["weather"] }}</td>
+                    <td>{{ dailyForecast[2]["max_temp"] }}</td>
+                    <td>{{ dailyForecast[2]["min_temp"] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ dailyForecast[3]["date"] }}</td>
+                    <td>{{ dailyForecast[3]["weather"] }}</td>
+                    <td>{{ dailyForecast[3]["max_temp"] }}</td>
+                    <td>{{ dailyForecast[3]["min_temp"] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ dailyForecast[4]["date"] }}</td>
+                    <td>{{ dailyForecast[4]["weather"] }}</td>
+                    <td>{{ dailyForecast[4]["max_temp"] }}</td>
+                    <td>{{ dailyForecast[4]["min_temp"] }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

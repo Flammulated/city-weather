@@ -1,0 +1,43 @@
+body {
+    background-color: greenyellow;
+    text-align: center;
+    font-family: Orienta, sans-serif;
+}
+
+h1 {
+    font-family: Unbounded, sans-serif; 
+}
+
+h2 {
+    margin: 10px 0 20px 0;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 0 0 20px 0;
+}
+
+table { 
+    border: 5px solid black;
+    background-color: white;
+    border-collapse: collapse; 
+    width: 100%;
+}
+
+tr { 
+    border: none; 
+}
+
+th, td {
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+}
+
+input[type="text"] {
+    margin: 0 10px 0 0;
+}
+
+#cityName {
+    margin: 20px 0 0 0;
+    color: purple;
+}
